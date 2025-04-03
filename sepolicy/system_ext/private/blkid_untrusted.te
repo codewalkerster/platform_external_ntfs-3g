@@ -1,0 +1,11 @@
+# blkid for  block devices
+allow blkid_untrusted blkid_exec:file { entrypoint execute_no_trans};
+allow blkid_untrusted vold_device:blk_file rw_file_perms;
+allow blkid_untrusted vold:unix_stream_socket { read write };
+allow blkid_untrusted self:capability sys_admin;
+allow blkid_untrusted self:capability { setgid setuid };
+allow blkid_untrusted fuseblk:filesystem { mount };
+allow blkid_untrusted mnt_media_rw_file:dir { search getattr };
+allow blkid_untrusted mnt_media_rw_stub_file:dir { getattr mounton };
+allow blkid_untrusted proc_filesystems:file { read open getattr };
+allow blkid_untrusted fuse_device:chr_file rw_file_perms;

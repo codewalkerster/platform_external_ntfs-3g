@@ -211,3 +211,7 @@ LOCAL_STATIC_LIBRARIES:= libntfs-3g libfuse-lite
 include $(BUILD_EXECUTABLE)
 
 endif
+# Set the sepolicy directories.
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += vendor/amlogic/common/external/ntfs-3g/sepolicy/system_ext/public
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += vendor/amlogic/common/external/ntfs-3g/sepolicy/system_ext/private
+BOARD_SEPOLICY_DIRS += vendor/amlogic/common/external/ntfs-3g/sepolicy/vendor

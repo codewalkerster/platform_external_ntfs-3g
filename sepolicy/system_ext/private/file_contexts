@@ -1,0 +1,4 @@
+# exec for ntfs
+/system_ext/bin/ntfsfix     --        u:object_r:blkid_exec:s0
+/system_ext/bin/ntfs-3g             u:object_r:blkid_exec:s0
+
